@@ -30,7 +30,7 @@ export class TarefaService {
       if (tarefa.id === obj.id) {
         objs[index] = tarefa;
       }
-    })
+    });
     localStorage['tarefas'] = JSON.stringify(tarefas);
   }
 
@@ -46,7 +46,8 @@ export class TarefaService {
       if (id === obj.id) {
         objs[index].concluida = !obj.concluida;
       }
-    })
+    });
+    localStorage['tarefas'] = JSON.stringify(tarefas);
   }
   
 }
