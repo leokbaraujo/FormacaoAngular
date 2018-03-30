@@ -144,7 +144,7 @@ export class JogoDaVelhaService {
           }
         }
       }
-      let k = Math.floor((Math.random() * (jogada.length - 1)));
+      let k = Math.floor((Math.random() * (jogadas.length - 1)));
       jogada = [jogadas[k][0], jogadas[k][1]];
     }
 
