@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { JogoDaVelhaService } from './shared';
+
 @Component({
   selector: 'app-jogo-da-velha',
   templateUrl: './jogo-da-velha.component.html',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JogoDaVelhaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private jogoDaVelhaService: JogoDaVelhaService) { }
 
   ngOnInit() {
+    this.jogoDaVelhaService.inicializar();
+  }
+
+  get showInicio(): boolean {
+    return this.jogoDaVelhaService.showInicio;
   }
 
 }
