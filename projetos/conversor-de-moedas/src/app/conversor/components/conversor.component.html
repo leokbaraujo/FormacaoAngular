@@ -33,4 +33,10 @@
              [disabled]="!conversaoForm.form.valid">
     </form>
   </div>
+  <modal-cotacao
+    [id]="'modalCotacao'"
+    [conversaoResponse]="conversaoResponse"
+    [conversao]="conversao"
+    (onConfirm)="init()">
+  </modal-cotacao>
 </div>

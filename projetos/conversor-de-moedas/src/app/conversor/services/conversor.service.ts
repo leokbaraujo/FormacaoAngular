@@ -11,15 +11,15 @@ import {
 @Injectable()
 export class ConversorService {
 
-  private readonly BASE_URL = 'http://api.fixer.io/latest';
+  private readonly BASE_URL = 'http://data.fixer.io/api/latest?access_key=a64fa4bfdec63e72668206c014a9c6b5';
 
   constructor(private http: Http) { }
 
   converter(conversao: Conversao): Observable<ConversaoResponse> {
-    let params = `?base=${conversao.moedaDe}&symbol${conversao.moedaPara}`;
-
+    //let params = `&symbols=${conversao.moedaDe},${conversao.moedaPara}`; modelo não mais utilizado pela api
+    let params = `&symbols=${conversao.moedaPara}`;
     return this.http
-               .get(this.BASE_URL + params)
+               .get(`${this.BASE_URL}${params}`)
                .map(response => response.json() as ConversaoResponse)
                .catch(error => Observable.throw(error));
   }
