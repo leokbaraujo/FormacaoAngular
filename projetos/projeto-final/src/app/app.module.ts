@@ -7,7 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardModule } from './dashboard';
 import { CalculadoraModule } from './calculadora';
 import { ConversorModule } from './conversor';
- 
+import { TarefasModule } from './tarefas';
+import { JogoDaVelhaModule } from './jogo-da-velha'; 
 
 @NgModule({
   declarations: [
@@ -18,6 +19,8 @@ import { ConversorModule } from './conversor';
     DashboardModule,
     CalculadoraModule,
     ConversorModule,
+    TarefasModule,
+    JogoDaVelhaModule,
     AppRoutingModule
   ],
   providers: [],
