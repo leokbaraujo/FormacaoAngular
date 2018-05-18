@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardModule } from './dashboard';
+import { CalculadoraModule } from './calculadora';
  
 
 @NgModule({
@@ -12,6 +14,8 @@ import { AppRoutingModule } from './app-routing.module'
   ],
   imports: [
     BrowserModule,
+    DashboardModule,
+    CalculadoraModule,
     AppRoutingModule
   ],
   providers: [],
